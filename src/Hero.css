@@ -5,7 +5,7 @@
 }
 .content {
     position: absolute;
-    top: 45%;
+    top: 70%;
     left: 35%;
     transform: translate(-50%, -50%);
     padding: 30px;
@@ -78,3 +78,14 @@
     }
 }
 
+@keyframes colorChange{
+    0%{
+        color: yellow;
+    }
+    75%{
+        color: azure
+    }
+    100%{
+        color: chartreuse;
+    }
+  }
