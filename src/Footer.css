@@ -26,7 +26,7 @@
     width: 100%;
     height: 50px;
     font-size: larger;
-    animation: fade-in 1s ease-in-out;
+    animation: fade-in 1s ease-in-out; /* Slow at the beginning (in) and end (out) end */
 }
 
 

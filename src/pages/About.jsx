@@ -11,6 +11,7 @@ const About = () => {
 
   return (
     <section id="skills" className="skills-section">
+      <img src="https://media.istockphoto.com/id/867382344/photo/workplace-with-notebook-on-wood-table.jpg?s=612x612&w=0&k=20&c=IPXQgeEBga7tyi5cT4Oxdq42ZO1bKYJDwHwJ7lcCbjI=" alt="Skills list" />
       <div className="skills-container">
         <h2 className="skills-title">Skills</h2>
         <div className="skills-grid">

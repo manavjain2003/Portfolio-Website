@@ -1,96 +1,151 @@
 .Navbar {
-    width: 100%;
-    height: 100px;
-    padding-top: 30px;
-    background: linear-gradient(45deg, #6a11cb, #2575fc); 
-    transition: all 0.3s ease;
-    position: relative;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-  }
-  
+  width: 100%;
+  padding-top: 30px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); 
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.Nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.Nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 35px;
+  font-size: larger;
+  list-style: none;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav-links a {
+  text-decoration: none;
+  color: white; 
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Nav-links a:hover {
+  color: #3498db; 
+  transform: scale(1.1); 
+}
+
+.Logo {
+  font-size: xx-large;
+  font-family: Arial, sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white; 
+  transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+  margin-bottom: 5px;
+  animation: colorChange 0.3s infinite;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.Logo a {
+  text-decoration: none;
+  color: white;
+  margin-left: 0;
+  margin-bottom: 0;
+  border-radius: 5px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Logo a:hover {
+  color: #fff;
+  background-color: #3498db; 
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.7); 
+  transform: scale(1.1); 
+}
+
+/* Media queries to maintain layout on different devices */
+@media screen and (max-width: 768px) {
   .Nav-container {
-    display: flex;
-    justify-items: center;
     width: 100%;
-    position: relative;
+    padding: 0 10px;
   }
   
   .Nav-links {
-    display: flex;
-    margin: auto;
-    gap: 80px;
-    font-size: larger;
-    list-style: none;
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    gap: 20px;
   }
   
   .Nav-links a {
-    text-decoration: none;
-    color: white; 
-    position: relative;
-    padding: 5px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    animation:  duration timing-function delay iteration-count direction fill-mode;
-  }
-  
-  .Nav-links a:hover {
-    color: #3498db; 
-    transform: scale(1.1); 
+    font-size: 1rem;
   }
   
   .Logo {
-    font-size: xx-large;
-    font-family: 'Times New Roman', Times, serif;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white; 
-    transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
-    margin-bottom: 5px;
+    font-size: x-large;
   }
-  
-  .Logo a {
-    text-decoration: none;
-    color: white;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
-    animation: colorChange 0.3s infinite;
-  }
-  
-  .Logo a:hover {
-    color: #fff;
-    background-color: #3498db; 
-    box-shadow: 0 0 15px rgba(52, 152, 219, 0.7); 
-    transform: scale(1.1); 
-  }
-  
-  .Navbar {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-  }
-  
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+@media screen and (max-width: 480px) {
+  .Navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   
-  @keyframes colorChange{
-    0%{
-        color: yellow;
-    }
-    75%{
-        color: azure
-    }
-    100%{
-        color: chartreuse;
-    }
+  .Nav-links {
+    gap: 10px;
   }
+  
+  .Nav-links a {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  
+  .Logo {
+    font-size: large;
+    padding: 8px 12px;
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 380px) {
+  .Nav-links {
+    gap: 5px;
+  }
+  
+  .Nav-links a {
+    padding: 3px;
+    font-size: 0.8rem;
+  }
+  
+  .Logo {
+    font-size: medium;
+    padding: 6px 10px;
+  }
+}
+
+
+
+@keyframes colorChange {
+  0% {
+    color: yellow;
+  }
+  75% {
+    color: azure;
+  }
+  100% {
+    color: chartreuse;
+  }
+}

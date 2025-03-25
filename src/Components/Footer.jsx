@@ -14,7 +14,7 @@ function Footer() {
         <Link to="https://www.instagram.com/manavjain_3000/"> <img src={insta} alt="linkdln" style={{width:60, alignItems:"center"}} /> </Link>
         <Link to="www.linkedin.com/in/manav-jain-b950a9264"> <img src={linkdln} alt="Facebook" style={{width:60, alignItems:"center"}} /> </Link>
       </div>
-      <p class="para">© 2025 Your Name. All rights reserved.</p>
+      <p class="para">© 2025 Portfolio. All rights reserved.</p>
     </footer>
   )
 }
