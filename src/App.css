@@ -16,20 +16,167 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
-/* Adjustments for header space */
+/* Base section padding */
 section {
-  padding-top: 70px;
+  padding-top: 0px;
+}
+
+/* Responsive breakpoints */
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 30px;
+  }
+  
+  section {
+    padding-top: 0px;
+
+  }
+}
+
+/* Desktop (1024px to 1439px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 25px;
+  }
+  
+  section {
+    padding-top: 0px;
+  }
+}
+
+/* Tablet Landscape (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  section {
+    padding-top: 0px;
+  }
+}
+
+/* Tablet Portrait (481px to 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  section {
+    padding-top: 0px;
+  }
+}
+
+/* Mobile Large (376px to 480px) */
+@media screen and (min-width: 376px) and (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  section {
+    padding-top: 0px;
+ 
+  }
+}
+
+/* Mobile Medium (321px to 375px) */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  section {
+    padding-top: 0px;
+  }
+}
+
+/* Mobile Small (320px and below) */
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 0 8px;
+  }
+  
+  section {
+    padding-top: 0px;
+  }
+}
+
+/* Additional responsive utilities */
+.text-responsive {
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+.heading-responsive {
+  font-size: clamp(24px, 5vw, 48px);
+}
+
+.subheading-responsive {
+  font-size: clamp(18px, 3.5vw, 32px);
+}
+
+/* Flexbox utilities for responsive layout */
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 @media screen and (max-width: 768px) {
-  section {
-    padding-top: 60px;
+  .flex-responsive {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Adjust other sections to maintain proper spacing */
+#about {
+  min-height: 80vh;
+  margin-top: 0; /* Reset margin to prevent overlap */
+}
+
+#projects {
+  min-height: 100vh;
+  margin-top: 0; /* Reset margin to prevent overlap */
+}
+
+#contact {
+  min-height: 60vh;
+}
+
+/* Style for active navigation links (optional) */
+.Nav-content.active {
+  color: wheat;
+  font-weight: bold;
+}
+
+/* Additional responsive adjustments for Hero section */
+@media screen and (max-width: 768px) {
+  #home {
+    min-height: 110vh; /* Slightly less on mobile but still increased */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home {
+    min-height: 100vh;
   }
 }
